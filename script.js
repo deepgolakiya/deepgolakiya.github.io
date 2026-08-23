@@ -1,8 +1,5 @@
-// Mobile nav toggle — explicitly force a closed state on load and on any
-// resize back to desktop width, rather than relying on the class simply
-// never being added; some browsers can restore stale DOM/class state
-// across navigations, and a stuck-open full-height nav overlay would be a
-// bad first impression if that ever happened on someone's actual phone.
+// force the mobile nav closed on load and on resize back to desktop width
+// (some browsers restore stale open state on navigation, don't want that)
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 navLinks.classList.remove('open');
