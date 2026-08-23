@@ -163,15 +163,8 @@ a { color: inherit; text-decoration: none; }
 .about-facts { display: flex; flex-direction: column; gap: 1.6rem; }
 .about-photo {
   width: 100%; max-width: 260px; aspect-ratio: 4 / 5; object-fit: cover;
-  border-radius: 16px; border: 1px solid var(--border); margin-bottom: 0.4rem;
+  border-radius: 16px; border: 1px solid var(--border);
 }
-.fact {
-  display: flex; flex-direction: column; gap: 0.2rem;
-  border-left: 2px solid var(--border); padding-left: 1.2rem;
-}
-.fact-num { font-family: var(--font-display); color: var(--accent); font-weight: 600; font-size: 0.85rem; }
-.fact-label { font-weight: 600; font-size: 1.02rem; }
-.fact-sub { color: var(--text-dimmer); font-size: 0.9rem; }
 
 /* ---------- Timeline ---------- */
 .timeline { display: flex; flex-direction: column; gap: 2.4rem; }
