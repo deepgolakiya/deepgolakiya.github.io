@@ -217,17 +217,18 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-display); color: var(--text-dimmer); font-size: 1.4rem; font-weight: 600;
 }
 .project-row:hover .project-num { color: var(--accent); }
-.project-info h3 {
-  font-size: 1.25rem; font-weight: 600; margin-bottom: 0.6rem;
-  display: flex; align-items: center; gap: 0.5em;
-}
-.project-info .arrow { opacity: 0.55; transition: opacity 0.2s ease, transform 0.2s ease; color: var(--accent); }
-.project-row:hover .arrow { opacity: 1; transform: translate(2px, -2px); }
+.project-info h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.6rem; }
+.project-info .arrow { display: inline-block; transition: transform 0.2s ease; color: var(--accent); }
+.project-row:hover .arrow { transform: translate(2px, -2px); }
 .project-info p { color: var(--text-dim); font-size: 0.96rem; max-width: 640px; margin-bottom: 1rem; }
-.tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
 .tags span {
   font-size: 0.78rem; color: var(--accent); background: var(--accent-soft);
   padding: 0.3em 0.8em; border-radius: 100px; font-weight: 500;
+}
+.project-cta {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  font-size: 0.9rem; font-weight: 600; color: var(--accent);
 }
 .view-all { margin-top: 2.5rem; }
 
