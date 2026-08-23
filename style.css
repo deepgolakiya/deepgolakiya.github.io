@@ -271,8 +271,9 @@ footer {
   .contact-links { gap: 2rem; }
   .hero-photo-wrap { display: none; }
   .hero-photo-mobile {
-    display: block; width: 84px; aspect-ratio: 4 / 5; object-fit: cover;
-    border-radius: 14px; border: 1px solid var(--border); margin-bottom: 1.4rem;
+    display: block; width: 44vw; max-width: 220px; aspect-ratio: 4 / 5; object-fit: cover;
+    border-radius: 18px; border: 1px solid var(--border); margin-bottom: 1.6rem;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 50px rgba(45, 212, 191, 0.15);
   }
 }
 
