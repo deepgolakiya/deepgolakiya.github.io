@@ -209,6 +209,22 @@ a { color: inherit; text-decoration: none; }
 .recommendation .arrow { transition: transform 0.2s ease; }
 .recommendation:hover .arrow { transform: translate(2px, -2px); }
 
+.work-samples {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+.work-samples-label { font-size: 0.86rem; color: var(--text-dimmer); margin-right: 0.1rem; }
+.work-sample {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  padding: 0.4em 0.85em; font-size: 0.84rem; font-weight: 500;
+  color: var(--accent); background: var(--accent-soft);
+  border: 1px solid transparent; border-radius: 100px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.work-sample:hover { border-color: var(--accent); background: transparent; }
+.work-sample .arrow { transition: transform 0.2s ease; }
+.work-sample:hover .arrow { transform: translate(2px, -2px); }
+
 /* ---------- Skills ---------- */
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
 .skill-card {
