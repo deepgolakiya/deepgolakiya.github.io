@@ -238,17 +238,28 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Projects ---------- */
 .projects-list { display: flex; flex-direction: column; }
 .project-row {
-  display: grid; grid-template-columns: 60px 1fr; gap: 1.6rem;
+  display: grid; grid-template-columns: 60px 1fr; grid-template-areas: "num info";
+  align-items: center; gap: 1.6rem;
   padding: 2rem 1.2rem; border-top: 1px solid var(--border);
   transition: background 0.25s ease, padding-left 0.25s ease;
   border-radius: 8px;
 }
+.project-row:has(.project-thumb) { grid-template-columns: 60px 200px 1fr; grid-template-areas: "num thumb info"; }
 .project-row:last-child { border-bottom: 1px solid var(--border); }
 .project-row:hover { background: var(--surface); padding-left: 1.6rem; }
 .project-num {
+  grid-area: num;
   font-family: var(--font-display); color: var(--text-dimmer); font-size: 1.4rem; font-weight: 600;
+  align-self: start;
 }
 .project-row:hover .project-num { color: var(--accent); }
+.project-thumb {
+  grid-area: thumb; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: 10px; border: 1px solid var(--border);
+  transition: border-color 0.25s ease;
+}
+.project-row:hover .project-thumb { border-color: var(--accent); }
+.project-info { grid-area: info; }
 .project-info h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.6rem; }
 .project-info .arrow { display: inline-block; transition: transform 0.2s ease; color: var(--accent); }
 .project-row:hover .arrow { transform: translate(2px, -2px); }
@@ -322,4 +333,8 @@ footer {
   #navLinks.open { transform: translateX(0); }
   #navLinks a { font-size: 1.1rem; }
   .project-row { grid-template-columns: 40px 1fr; padding: 1.6rem 0.6rem; }
+  .project-row:has(.project-thumb) {
+    grid-template-columns: 40px 1fr; grid-template-areas: "num info" "thumb thumb";
+  }
+  .project-row:has(.project-thumb) .project-thumb { aspect-ratio: 16 / 9; margin-top: 1rem; }
 }
